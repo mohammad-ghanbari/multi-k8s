@@ -14,7 +14,7 @@ after_success:
   - docker build -t mgh1990/multi-server ./server
   - docker build -t mgh1990/multi-worker ./worker
   # Log in to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password_stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Take those images and push them to docker hub
   - docker push mgh1990/multi-client
   - docker push mgh1990/multi-nginx
