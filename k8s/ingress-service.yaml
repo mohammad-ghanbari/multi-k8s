@@ -4,6 +4,7 @@ kind: Ingress
 metadata:
   name: ingress-service
   annotations:
+    kubernetes.io/ingress.class: nginx
     # REMOVE CLASSNAME ANNOTATION
     nginx.ingress.kubernetes.io/use-regex: 'true'
     # ADD ANNOTATION
@@ -17,7 +18,6 @@ spec:
         - udemy.ghanbari.ca
         - www.udemy.ghanbari.ca
       secretName: udemy-ghanbari-ca
-  #ingressClassName: nginx
   # ADD INGRESSCLASSNAME FIELD
   rules:
     - host: udemy.ghanbari.ca
