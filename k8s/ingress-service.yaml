@@ -20,12 +20,12 @@ spec:
       secretName: udemy-ghanbari-ca
   # ADD INGRESSCLASSNAME FIELD
   rules:
-    - host: udemy.ghanbari.
+    - host: udemy.ghanbari.ca
       http:
         paths:
           - path: /?(.*)
             # UPDATE PATH
-            pathType: ImplementationSpecific
+            pathType: Prefix
             # ADD PATHTYPE
             backend:
               service:
@@ -35,7 +35,7 @@ spec:
                   number: 3000
           - path: /api/?(.*)
             # UPDATE PATH
-            pathType: ImplementationSpecific
+            pathType: Prefix
             # ADD PATHTYPE
             backend:
               service:
@@ -48,7 +48,7 @@ spec:
         paths:
           - path: /?(.*)
             # UPDATE PATH
-            pathType: ImplementationSpecific
+            pathType: Prefix
             # ADD PATHTYPE
             backend:
               service:
@@ -58,7 +58,7 @@ spec:
                   number: 3000
           - path: /api/?(.*)
             # UPDATE PATH
-            pathType: ImplementationSpecific
+            pathType: Prefix
             # ADD PATHTYPE
             backend:
               service:
